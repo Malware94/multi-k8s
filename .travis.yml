@@ -21,3 +21,4 @@ after_success:
   - docker push rmiport/multi-nginx
   - docker push rmiport/multi-server
   - docker push rmiport/multi-worker
+  
