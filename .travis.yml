@@ -17,7 +17,7 @@ after_success:
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
-  - docker push malware94/multi-client
-  - docker push malware94/multi-nginx
-  - docker push malware94/multi-server
-  - docker push malware94/multi-worker
+  - docker push rmiport/multi-client
+  - docker push rmiport/multi-nginx
+  - docker push rmiport/multi-server
+  - docker push rmiport/multi-worker
