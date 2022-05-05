@@ -1,4 +1,5 @@
 language: generic
+
 services:
   - docker
 
@@ -20,4 +21,3 @@ script:
     - docker push malware94/multi-nginx
     - docker push malware94/multi-server
     - docker push malware94/multi-worker
-  
