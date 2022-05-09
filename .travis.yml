@@ -16,6 +16,11 @@ after_success:
   - docker build -t malware94/multi-worker ./worker
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  # Tagging images before upload
+  - docker commit complex-client-1 rmiport/multi-client
+  - docker commit complex-nginx-1 rmiport/multi-nginx
+  - docker commit complex-api-1 rmiport/multi-server
+  - docker commit complex-worker-1 rmiport/multi-worker
   # Take those images and push them to docker hub
   - docker push rmiport/multi-client
   - docker push rmiport/multi-nginx
